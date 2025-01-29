@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text } from 'ink';
+import { Text } from 'ink';
 import { LoadingSpinner } from './spinner.js';
 
 interface ConfigStepProps {
@@ -32,7 +32,6 @@ export const ConfigStep: React.FC<ConfigStepProps> = ({ step, status, error }) =
   };
 
   return (
-    <Box>
       <Text color={getColor()}>
         {status === 'pending' ? <LoadingSpinner text={step} /> : (
           <Text>
@@ -41,6 +40,5 @@ export const ConfigStep: React.FC<ConfigStepProps> = ({ step, status, error }) =
           </Text>
         )}
       </Text>
-    </Box>
   );
 };
