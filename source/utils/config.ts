@@ -4,8 +4,8 @@ import { Config } from '../types/index.js';
 
 export const fetchConfig = async (type: string): Promise<Config> => {
   const jsonUrl = type === 'tcp' 
-    ? 'https://raw.githubusercontent.com/sajjaddg/xray-reality/master/tcp-config.json'
-    : 'https://raw.githubusercontent.com/sajjaddg/xray-reality/master/config.json';
+    ? 'https://raw.githubusercontent.com/sajjaddg/xray-reality/tcp/tcp-config.json'
+    : 'https://raw.githubusercontent.com/sajjaddg/xray-reality/tcp/config.json';
 
   execSync(`curl -s ${jsonUrl} -o config.json`);
   return JSON.parse(fs.readFileSync('config.json', 'utf8'));
