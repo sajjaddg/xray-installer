@@ -13,7 +13,7 @@ interface AppProps {
 export default function App({ type }: AppProps) {
   const [step, setStep] = useState(1);
   const [error, setError] = useState<string | null>(null);
-  const [config, setConfig] = useState<Config | null>(null);
+  const [, setConfig] = useState<Config | null>(null);
   const [url, setUrl] = useState<string | null>(null);
 
   const steps = [
